@@ -94,7 +94,7 @@ jobs:
           git config --global user.email "vedharagavan2404@gmail.com"
           git config --global user.name "Vedha Ragavan"
           git add kubernetes/productcatalog/deploy.yaml
-          git commit -m [CI]:update image tag to ${{ github.run_id }}"
+          git commit -m "[CI]:update image tag to ${{ github.run_id }}"
           git push
         
 
