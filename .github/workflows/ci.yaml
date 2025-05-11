@@ -83,12 +83,15 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v4
         with:
+          ref: githubcicheck
           token: ${{ secrets.TOKEN }}
-
+      - name: Show file before sed
+        run: cat kubernetes/productcatalog/deploy.yaml
       - name: update tag in kubernetes deployment manifest
         run: |
-          sed -i 's|image:  .*|image: ${{ secrets.DOCKER_USERNAME }}/product-catalog:"${{github.run_id}}"|' kubernetes/productcatalog/deploy.yaml
-
+          sed -i 's|image: .*|image: ${{ secrets.DOCKER_USERNAME }}/product-catalog:"${{github.run_id}}"|' kubernetes/productcatalog/deploy.yaml
+      - name: Show file after sed
+        run: cat kubernetes/productcatalog/deploy.yaml
       - name: commit changes
         run: |
           git config --global user.email "vedharagavan2404@gmail.com"
