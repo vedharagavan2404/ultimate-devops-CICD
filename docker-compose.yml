@@ -114,7 +114,7 @@ services:
         condition: service_started
     logging: *logging
 
-  # Checkout service
+  # Checkout Service 
   checkout:
     image: ${IMAGE_NAME}:${DEMO_VERSION}-checkout
     container_name: checkout
