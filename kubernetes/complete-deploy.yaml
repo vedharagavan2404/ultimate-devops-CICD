@@ -110,6 +110,7 @@ metadata:
   name: opentelemetry-demo-emailservice
   labels:
     
+    
     opentelemetry.io/name: opentelemetry-demo-emailservice
     app.kubernetes.io/instance: opentelemetry-demo
     app.kubernetes.io/component: emailservice
