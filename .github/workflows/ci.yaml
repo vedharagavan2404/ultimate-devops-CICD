@@ -98,7 +98,7 @@ jobs:
           git config --global user.name "Vedha Ragavan"
           git checkout -b main
           git add kubernetes/productcatalog/deploy.yaml
-          git commit -m "[CI]:update image tag to ${{ github.run_id }}"
+          git commit -m "[CI]:updated image tag to ${{ github.run_id }}"
           git push origin main
         
 
