@@ -94,7 +94,7 @@ jobs:
         run: cat kubernetes/productcatalog/deploy.yaml
       - name: commit changes
         run: |
-          git config --global user.email "vedharagavan2404@gmail.com"
+          git config --global user.email "vedharagavan2497@gmail.com"
           git config --global user.name "Vedha Ragavan"
           git checkout githubcicheck
           git add kubernetes/productcatalog/deploy.yaml
